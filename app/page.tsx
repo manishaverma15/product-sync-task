@@ -1,10 +1,9 @@
+'use client'
 import type { Metadata } from "next";
-import { Counter } from "./components/counter/Counter";
+import { LoginForm } from "./components/orgnisms/LoginFrom";
+
+import "./styles/globals.css";
 
 export default function IndexPage() {
-  return <Counter />;
+  return <LoginForm />
 }
-
-export const metadata: Metadata = {
-  title: "Redux Toolkit",
-};
