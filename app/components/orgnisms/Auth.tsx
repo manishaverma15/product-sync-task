@@ -14,7 +14,9 @@ export function Auth({ children }: { children: React.ReactNode }) {
   const user = useSelector((state: RootState) => state.user.user);
 
   useEffect(() => {
-    router.replace('/dashboard');
+    if (user) {
+      router.replace('/dashboard');
+    }
   }, [user]);
 
   const dispatch = useAppDispatch();
